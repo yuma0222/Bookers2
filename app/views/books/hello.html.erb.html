@@ -1,0 +1,45 @@
+<html>
+<body>
+  <div class="body">
+    <div class="container">
+      <p id="notice"></p>
+      <div class="row">
+        <div class="col-xs-3">
+
+         <%= render 'books/list', books: @books %>
+
+         <div class="col-xs-9">
+          <h2>Users</h2>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Opinion</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @users.each do |user| %>
+              <tr>
+                <td><img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon"></td>
+                <td>Test <span><%= user.id %></span><br /></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>本文 <span><%= user.id %></span><br /></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

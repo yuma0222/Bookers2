@@ -1,0 +1,50 @@
+<body>
+
+	<div class="body">
+		<div class="container">
+
+			<p id="notice"></p>
+
+
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<h1>Editing Book</h1>
+
+					<%= form_for(@book) do |f| %>
+					<div class="field row">
+						<h5>Title</h5>
+						<tr><%= f.text_field :title %></tr>
+					</div>
+
+					<div class="field row">
+						<h5>Opinion</h5>
+						<tr><%= f.text_area :body %></tr>
+					</div>
+
+					<div class="actions row">
+						<%= f.submit 'Update' %>
+					</div>
+				</form>
+				<% end %>
+				<a><%= link_to "Show", book_path(@book), class: "pull-center" %></a>|
+				<a><%= link_to 'Back', "/books/index" %></a>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-3 col-xs-offset-9">
+				<p>CopyRight Infratop.inc</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+
+
+</body>
